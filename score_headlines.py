@@ -17,6 +17,8 @@ from datetime import datetime
 import joblib
 from sentence_transformers import SentenceTransformer
 
+# pylint: disable=import-error
+
 MODEL_FILENAME = "svm.joblib"
 # EMBEDDING_MODEL_PATH = "/opt/huggingface_models/all-MiniLM-L6-v2"
 EMBEDDING_MODEL_PATH = "all-MiniLM-L6-v2"

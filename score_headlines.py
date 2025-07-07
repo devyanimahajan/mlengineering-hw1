@@ -11,3 +11,9 @@ This program should output a new file, called headline_scores_source_year_month_
 
 # imports
 
+import sys
+import os
+from datetime import datetime
+import joblib
+from sentence_transformers import SentenceTransformer
+

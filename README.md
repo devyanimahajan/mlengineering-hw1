@@ -1,6 +1,7 @@
-# mlengineering-hw1
+# Python for ML Engineering: Homework 1
+--- 
 
-### Set up environment 
+### Set up Environment 
 #### either use conda:
 ```bash
 conda env create -f environment.yml
@@ -11,6 +12,8 @@ conda activate headline-env
 pip install -r requirements.txt
 ```
 in this case, make sure **rust is installed**
+
+---
 
 ### Run Script
 #### run as follows:

@@ -73,4 +73,4 @@ def analyze_headlines(payload: HeadlinePayload):
 
 # RUN
 if __name__ == "__main__":
-    uvicorn.run("score_headlines_api:app", host="0.0.0.0", port=8007, reload=True)
+    uvicorn.run("score_headlines_api:app", host="0.0.0.0", port=8012, reload=True)

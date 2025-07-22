@@ -8,11 +8,14 @@
 # Note: the environment needed for this differs from that of score_headlines.py
 # Use apienv.yml
 
+"""
+API service to score news headlines
+"""
+
 # IMPORTS
 import logging
 from typing import List
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from sentence_transformers import SentenceTransformer
 import joblib
@@ -38,21 +41,21 @@ except Exception as e:
 
 
 class HeadlinePayload(BaseModel):
-    # Expected input format: list of headlines
+    """Expected input format: list of headlines"""
     headlines: List[str]
 
 
 # LOGS
 @app.get("/healthcheck")
 def healthcheck():
-    # Basic GET endpoint to verify the API is up
+    """Basic GET endpoint to verify the API is up"""
     log.info("Healthcheck ping received.")
     return {"status": "ok"}
 
 
 @app.post("/analyze")
 def analyze_headlines(payload: HeadlinePayload):
-    # Score list of headlines using encoder + SVM model
+    """Score list of headlines using encoder + SVM model"""
     log.info("Received headline scoring request.")
 
     if not payload.headlines:
